@@ -33,7 +33,7 @@ async def get_statistic(
     return qs
 
 
-@service_router.delete("/delete/statistic", )
+@service_router.delete("/delete/statistic", status_code=200)
 async def delete_statistic():
     await Statistic.objects.delete(each=True)
     return {"status": "ok"}
